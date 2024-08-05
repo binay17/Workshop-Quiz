@@ -14,17 +14,25 @@ document
 
     let result = "";
 
-    if (answers.q1 === "yes") {
-      result = answers.q2 === "yes" ? "Website" : "SharePoint";
-    } else if (answers.q3 === "yes") {
+    if (answers.q3 === "yes") {
+      result = "SharePoint";
+    } else if (answers.q1 === "yes") {
+      if (answers.q2 === "yes" && answers.q3 === "no") {
+        result = "Both Website and SharePoint";
+      } else if (answers.q5 === "yes") {
+        result = "Website";
+      } else {
+        result = "SharePoint";
+      }
+    } else if (answers.q2 === "yes") {
       result =
         answers.q4 === "yes" || answers.q5 === "yes"
           ? "SharePoint"
           : "Both Website and SharePoint";
-    } else if (answers.q4 === "yes" || answers.q5 === "yes") {
-      result = "SharePoint";
+    } else if (answers.q5 === "yes") {
+      result = "Website";
     } else {
-      result = "Both Website and SharePoint";
+      result = "SharePoint";
     }
 
     document.getElementById("quizForm").classList.add("hidden");
