@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz: Website or SharePoint?</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Quiz: Do You Need a Website or SharePoint?</h1>
+      <form id="quizForm">
+        <div class="question">
+          <p>1. Do external people need to access your content?</p>
+          <label
+            ><input type="radio" name="q1" value="yes" required /> Yes</label
+          >
+          <label><input type="radio" name="q1" value="no" /> No</label>
+        </div>
+        <div class="question">
+          <p>
+            2. Is your content primarily public-facing and meant for a wide
+            audience?
+          </p>
+          <label
+            ><input type="radio" name="q2" value="yes" required /> Yes</label
+          >
+          <label><input type="radio" name="q2" value="no" /> No</label>
+        </div>
+        <div class="question">
+          <p>
+            3. Do you need to collaborate on documents or projects with your
+            team?
+          </p>
+          <label
+            ><input type="radio" name="q3" value="yes" required /> Yes</label
+          >
+          <label><input type="radio" name="q3" value="no" /> No</label>
+        </div>
+        <div class="question">
+          <p>
+            4. Do you require features like task management, timelines, and
+            real-time document collaboration?
+          </p>
+          <label
+            ><input type="radio" name="q4" value="yes" required /> Yes</label
+          >
+          <label><input type="radio" name="q4" value="no" /> No</label>
+        </div>
+        <div class="question">
+          <p>
+            5. Do you require advanced features like version history,
+            permissions management, and integration with Microsoft 365 tools
+            (e.g., Teams, OneDrive)?
+          </p>
+          <label
+            ><input type="radio" name="q5" value="yes" required /> Yes</label
+          >
+          <label><input type="radio" name="q5" value="no" /> No</label>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+      <div id="result" class="hidden">
+        <h1>Your Result: <span id="resultText"></span></h1>
+        <a href="#" id="retry">Take the Quiz Again</a>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
